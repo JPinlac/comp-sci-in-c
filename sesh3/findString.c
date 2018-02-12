@@ -14,6 +14,8 @@ int findString(char text[], char searchTerm[]) {
     
     do {
       searchCharacter = searchTerm[j];
+      
+      // if characters match keeps going down searchTerm to check subsequent characters
       if (text[i + j] != searchTerm[j]) {
         termFound = false;
         break;
@@ -26,6 +28,7 @@ int findString(char text[], char searchTerm[]) {
     if ( termFound == true ) {
       return i;
     }
+    
     i++;
   } while ( character != '\0');
   return -1;
