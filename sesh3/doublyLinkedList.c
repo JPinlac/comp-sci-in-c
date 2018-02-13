@@ -7,13 +7,10 @@ struct Node {
   struct Node* prev;
 };
 
-struct Node* head;
-
-
 int main(int argc, char *argv[]) {
   void printList();
   
-  head = (struct Node*)malloc(sizeof(struct Node));
+  struct Node* head = (struct Node*)malloc(sizeof(struct Node));
   struct Node* firstNode = (struct Node*)malloc(sizeof(struct Node));
   struct Node* secondNode = (struct Node*)malloc(sizeof(struct Node));
   head->number = 99;
@@ -28,10 +25,10 @@ int main(int argc, char *argv[]) {
   secondNode->prev = firstNode;
   secondNode->next = NULL;
 
-  printList();
+  printList(head);
 }
 
-void printList() {
+void printList(struct Node* head) {
   struct Node* nextNode = head;
   do {
     printf("%d \n", nextNode->number);
