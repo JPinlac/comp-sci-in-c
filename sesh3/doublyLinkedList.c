@@ -13,7 +13,6 @@ struct Node* head;
 int main(int argc, char *argv[]) {
   void printList();
   
-  //struct Node* head = (struct Node*)malloc(sizeof(struct Node));
   head = (struct Node*)malloc(sizeof(struct Node));
   struct Node* firstNode = (struct Node*)malloc(sizeof(struct Node));
   struct Node* secondNode = (struct Node*)malloc(sizeof(struct Node));
