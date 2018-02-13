@@ -13,7 +13,8 @@ struct Node* head;
 int main(int argc, char *argv[]) {
   void printList();
   
-  struct Node* head = (struct Node*)malloc(sizeof(struct Node));
+  //struct Node* head = (struct Node*)malloc(sizeof(struct Node));
+  head = (struct Node*)malloc(sizeof(struct Node));
   struct Node* firstNode = (struct Node*)malloc(sizeof(struct Node));
   struct Node* secondNode = (struct Node*)malloc(sizeof(struct Node));
   head->number = 99;
@@ -34,7 +35,7 @@ int main(int argc, char *argv[]) {
 void printList() {
   struct Node* nextNode = head;
   do {
-    printf("%d", head->number);
+    printf("%d \n", nextNode->number);
     nextNode = nextNode->next;
   } while ( nextNode != NULL);
 }
